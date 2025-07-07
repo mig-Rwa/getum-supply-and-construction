@@ -51,7 +51,7 @@ const whyChooseUs = [
 const team = [
   {
     name: 'Michel MBABAZI',
-    role: 'CEO & Founder',
+    role: 'Company Developer and Legal (CDL)',
     image: '/images/michel-mbabazi.jpg',
     bio: '25+ years of construction industry experience, leading innovative construction solutions',
     email: 'mbabamik1900@gmail.com',
@@ -68,7 +68,7 @@ const team = [
   {
     name: 'Miguel T. MBABAZI',
     role: 'Chief Technology Officer',
-    image: '/images/miguel-mbabazi.jpg',
+    image: '/images/miguel.jpg',
     bio: 'Pioneering digital transformation in construction technology',
     email: 'miguelmbabatunga31@gmail.com',
     phone: '+90 533 867 2160',
@@ -78,7 +78,7 @@ const team = [
     role: 'Engineer',
     image: '/images/eric-cyubahiro.jpg',
     bio: 'Dedicated team member at Getum Supply & Construction Ltd.',
-    email: 'eric.cyubahiro@example.com',
+    email: 'Mr.cyubahiroeric@gmail.com',
     phone: '0788259595',
   },
   {

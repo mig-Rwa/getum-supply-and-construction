@@ -1,7 +1,9 @@
+'use client';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import { TruckIcon, BeakerIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -94,24 +96,39 @@ export default function Home() {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {services.map((service) => (
-                <div key={service.name} className="flex flex-col">
-                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                    <service.icon className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-                    {service.name}
-                  </dt>
-                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                    <p className="flex-auto">{service.description}</p>
-                    <p className="mt-6">
-                      <a href="/services" className="text-sm font-semibold leading-6 text-blue-600">
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <motion.dl
+  className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+  initial="hidden"
+  animate="visible"
+  variants={{
+    visible: { transition: { staggerChildren: 0.3, delayChildren: 0.2 } },
+    hidden: {},
+  }}
+>
+  {services.map((service) => (
+    <motion.div
+      key={service.name}
+      variants={{
+        visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+        hidden: { opacity: 0, y: 40 },
+      }}
+      className="flex flex-col"
+    >
+      <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+        <service.icon className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+        {service.name}
+      </dt>
+      <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+        <p className="flex-auto">{service.description}</p>
+        <p className="mt-6">
+          <a href="/services" className="text-sm font-semibold leading-6 text-blue-600">
+            Learn more <span aria-hidden="true">→</span>
+          </a>
+        </p>
+      </dd>
+    </motion.div>
+  ))}
+</motion.dl>
           </div>
         </div>
       </div>
@@ -127,39 +144,54 @@ export default function Home() {
               We offer a comprehensive range of construction materials, from road base to fine aggregates, all produced to meet strict quality standards.
             </p>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {products.map((product) => (
-              <article key={product.name} className="flex flex-col items-start">
-                <div className="relative w-full">
-                  <Image
-                    key={`product-image-${product.name}`}
-                    src={product.image}
-                    alt={product.name}
-                    width={800}
-                    height={600}
-                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                  />
-                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div className="max-w-xl">
-                  <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <time dateTime="2024" className="text-gray-500">
-                      {product.category}
-                    </time>
-                  </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href="/products">
-                        <span className="absolute inset-0" />
-                        {product.name}
-                      </a>
-                    </h3>
-                    <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{product.description}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <motion.div
+  className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+  initial="hidden"
+  animate="visible"
+  variants={{
+    visible: { transition: { staggerChildren: 0.3, delayChildren: 0.2 } },
+    hidden: {},
+  }}
+>
+  {products.map((product) => (
+    <motion.article
+      key={product.name}
+      variants={{
+        visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+        hidden: { opacity: 0, y: 40 },
+      }}
+      className="flex flex-col items-start"
+    >
+      <div className="relative w-full">
+        <Image
+          key={`product-image-${product.name}`}
+          src={product.image}
+          alt={product.name}
+          width={800}
+          height={600}
+          className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+        />
+        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+      </div>
+      <div className="max-w-xl">
+        <div className="mt-8 flex items-center gap-x-4 text-xs">
+          <time dateTime="2024" className="text-gray-500">
+            {product.category}
+          </time>
+        </div>
+        <div className="group relative">
+          <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+            <a href="/products">
+              <span className="absolute inset-0" />
+              {product.name}
+            </a>
+          </h3>
+          <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{product.description}</p>
+        </div>
+      </div>
+    </motion.article>
+  ))}
+</motion.div>
           <div className="mt-16 flex justify-center">
             <a
               href="/products"

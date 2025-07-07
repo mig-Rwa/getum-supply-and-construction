@@ -55,12 +55,11 @@ export default function Footer() {
               <Image
                 src="/images/logo-getum.png"
                 alt="Getum Supply and Construction Ltd. Logo"
-                width={200}
-                height={67}
-                className="h-16 w-auto"
-                priority
+                height={120}
+                width={120}
+                className="h-32 w-auto rounded"
               />
-              <span className="text-2xl font-bold text-gray-900">Getum Supply and Construction Ltd.</span>
+              <span className="text-base font-bold text-gray-900">Getum Supply and Construction Ltd.</span>
             </Link>
             <p className="text-sm leading-6 text-gray-300">
               Building excellence, one project at a time. Your trusted partner in construction and renovation.

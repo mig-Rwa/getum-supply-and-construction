@@ -13,7 +13,7 @@ const equipment = [
   },
   {
     name: 'Bulldozer',
-    image: '/images/bulldozer.jpg',
+    image: '/images/bull.jpg',
     description: 'Powerful bulldozer for grading and pushing large quantities of soil.'
   },
   {

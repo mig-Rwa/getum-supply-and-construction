@@ -65,7 +65,7 @@ export default function EquipmentPage() {
     hidden: {}
   }}
 >
-  {equipment.map((item, idx) => (
+  {equipment.map((item) => (
     <motion.li
       key={item.name}
       variants={{

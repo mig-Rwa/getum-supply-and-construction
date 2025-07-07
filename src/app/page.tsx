@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import { TruckIcon, BeakerIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import { equipmentShowcase } from './equipment/equipmentShowcaseData';
 
 const services = [
   {
@@ -203,6 +204,59 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Equipment Showcase Section */}
+      <div className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Equipment Spotlight</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Explore Our Machinery
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              A glimpse at some of the heavy equipment powering our projects.
+            </p>
+          </div>
+          <motion.div
+            className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              visible: { transition: { staggerChildren: 0.3, delayChildren: 0.2 } },
+              hidden: {},
+            }}
+          >
+            {equipmentShowcase.map((item) => (
+              <motion.div
+                key={item.name}
+                variants={{
+                  visible: { opacity: 1, y: 0, transition: { duration: 1.1 } },
+                  hidden: { opacity: 0, y: 40 },
+                }}
+                className="flex flex-col items-center bg-gray-50 rounded-2xl shadow p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="relative w-full h-48 mb-4">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1 text-center">{item.name}</h3>
+                <p className="text-sm text-gray-600 text-center mb-2">{item.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+          <div className="mt-10 flex justify-center">
+            <a
+              href="/equipment"
+              className="inline-block rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500"
+            >
+              See All Equipment
+            </a>
+          </div>
+        </div>
+      </div>
       <Footer />
     </main>
   );

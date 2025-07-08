@@ -74,8 +74,8 @@ const team = [
     phone: '+90 533 867 2160',
   },
   {
-    name: 'Eric Cyubahiro',
-    role: 'Engineer',
+    name: 'Eng. Eric Cyubahiro',
+    role: 'Project manager | Civil Engineer',
     image: '/images/eric-cyubahiro.jpg',
     bio: 'Dedicated team member at Getum Supply & Construction Ltd.',
     email: 'Mr.cyubahiroeric@gmail.com',

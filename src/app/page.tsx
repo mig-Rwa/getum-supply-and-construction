@@ -50,15 +50,38 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <div className="relative isolate overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-            <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <motion.div
+          className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { transition: { staggerChildren: 0.25, delayChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          <motion.div
+            className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8"
+            variants={{
+              visible: { opacity: 1, y: 0, transition: { duration: 1.1 } },
+              hidden: { opacity: 0, y: 40 },
+            }}
+          >
+            <motion.h1
+              className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+              variants={{ visible: { opacity: 1, y: 0, transition: { duration: 1.1 } }, hidden: { opacity: 0, y: 40 } }}
+            >
               Quality Aggregates for Construction Excellence
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            </motion.h1>
+            <motion.p
+              className="mt-6 text-lg leading-8 text-gray-600"
+              variants={{ visible: { opacity: 1, y: 0, transition: { duration: 1.1, delay: 0.15 } }, hidden: { opacity: 0, y: 40 } }}
+            >
               GETUM Supply specializes in quarry extraction and aggregate production, delivering high-quality construction materials through advanced processing and rigorous quality control. We provide essential materials for infrastructure development across Rwanda.
-            </p>
-            <div className="mt-10 flex items-center gap-x-6">
+            </motion.p>
+            <motion.div
+              className="mt-10 flex items-center gap-x-6"
+              variants={{ visible: { opacity: 1, y: 0, transition: { duration: 1.1, delay: 0.3 } }, hidden: { opacity: 0, y: 40 } }}
+            >
               <a
                 href="/contact"
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -68,9 +91,12 @@ export default function Home() {
               <a href="/products" className="text-sm font-semibold leading-6 text-gray-900">
                 View Our Products <span aria-hidden="true">→</span>
               </a>
-            </div>
-          </div>
-          <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none xl:ml-32">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none xl:ml-32"
+            variants={{ visible: { opacity: 1, y: 0, transition: { duration: 1.1, delay: 0.45 } }, hidden: { opacity: 0, y: 40 } }}
+          >
             <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
               <Image
                 src="/images/quarry-construction.jpg"
@@ -81,8 +107,8 @@ export default function Home() {
                 priority
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <div className="bg-white py-24 sm:py-32">

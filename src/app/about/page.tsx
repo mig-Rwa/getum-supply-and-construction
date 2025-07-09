@@ -77,7 +77,7 @@ const team = [
     name: 'Eng. Eric Cyubahiro',
     role: 'Project manager | Civil Engineer',
     image: '/images/eric-cyubahiro.jpg',
-    bio: 'Dedicated team member at Getum Supply & Construction Ltd.',
+    bio: 'Passionate Civil Engineer | Project Management Specialist | Building Sustainable Communities',
     email: 'Mr.cyubahiroeric@gmail.com',
     phone: '0788259595',
   },

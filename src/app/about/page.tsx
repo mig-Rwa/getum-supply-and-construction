@@ -82,11 +82,11 @@ const team = [
     phone: '0788259595',
   },
   {
-    name: 'Robert UWASE',
-    role: 'Engineer',
-    image: '/images/robert-uwase.jpg',
-    bio: 'Dedicated team member at Getum Supply & Construction Ltd.',
-    email: 'robert.uwase@example.com',
+    name: 'Eng. Robert UWASE',
+    role: 'Civil engineer',
+    image: '/images/robert.jpg',
+    bio: 'Advice & maintaining...',
+    email: 'wanted.urobert@gmail.com',
     phone: '0788569771',
   },
 ];

@@ -88,6 +88,9 @@ export default function Home() {
               >
                 Get a Quote
               </a>
+              <a href="/services" className="rounded-md bg-blue-100 px-3.5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm hover:bg-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                View All Services
+              </a>
               <a href="/products" className="text-sm font-semibold leading-6 text-gray-900">
                 View Our Products <span aria-hidden="true">→</span>
               </a>

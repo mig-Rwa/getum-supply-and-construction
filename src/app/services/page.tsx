@@ -69,6 +69,12 @@ const services = [
     description: 'Professional project management to ensure your construction project stays on time and within budget.',
     icon: ClipboardDocumentCheckIcon,
     features: ['Timeline planning', 'Budget management', 'Contractor coordination', 'Quality control']
+  },
+  {
+    name: 'Supply & Construction of Water and Power Facilities',
+    description: 'End-to-end solutions for the supply and construction of water and electrical infrastructure, supporting sustainable community and industrial growth.',
+    icon: ClipboardDocumentCheckIcon,
+    features: ['Water supply systems', 'Power distribution networks', 'Pumping stations', 'Facility installation & maintenance']
   }
 ];
 

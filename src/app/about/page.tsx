@@ -51,7 +51,7 @@ const whyChooseUs = [
 const team = [
   {
     name: 'Michel MBABAZI',
-    role: 'Company Developer and Legal (CDL)',
+    role: 'Company developer and legal affairs',
     image: '/images/michel-mbabazi.jpg',
     bio: '25+ years of construction industry experience, leading innovative construction solutions',
     email: 'mbabamik1900@gmail.com',

@@ -83,9 +83,9 @@ const team = [
   },
   {
     name: 'Eng. Robert UWASE',
-    role: 'Civil engineer',
+    role: 'Advice & maintaining | Civil engineer',
     image: '/images/robert.jpg',
-    bio: 'Advice & maintaining...',
+    bio: 'Dedicated Civil Engineer | Expert in Equipment Advice & Maintenance | Ensuring Reliable Operations',
     email: 'wanted.urobert@gmail.com',
     phone: '0788569771',
   },

@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <div className="relative isolate overflow-hidden">
+      <div className="relative isolate overflow-hidden bg-white">
         <motion.div
           className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40"
           initial="hidden"

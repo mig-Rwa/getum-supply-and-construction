@@ -31,11 +31,13 @@ const officeLocations = [
         name: 'Eric Cyubahiro',
         role: 'Engineer',
         phone: '0788259595',
+        email: 'Mr.cyubahiroeric@gmail.com',
       },
       {
         name: 'Robert UWASE',
         role: 'Engineer',
         phone: '0788569771',
+        email: 'wanted.urobert@gmail.com',
       }
     ],
     social: {
@@ -122,7 +124,8 @@ export default function ContactPage() {
                             {location.staff.map((staff, idx) => (
                               <li key={idx} className="text-gray-300">
                                 <span className="font-semibold">{staff.name}</span> - {staff.role}<br />
-                                <span className="text-sm"><PhoneIcon className="inline h-4 w-4 mr-1 text-gray-400" />{staff.phone}</span>
+                                <span className="text-sm"><PhoneIcon className="inline h-4 w-4 mr-1 text-gray-400" />{staff.phone}</span><br />
+                                <span className="text-sm"><EnvelopeIcon className="inline h-4 w-4 mr-1 text-gray-400" />{staff.email}</span>
                               </li>
                             ))}
                           </ul>

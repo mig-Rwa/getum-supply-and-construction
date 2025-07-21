@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Navbar() {
   return (
-    <header className="w-full px-6 py-4 bg-white shadow-md">
+    <header className="w-full px-6 py-4 bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         {/* Logo + Company Name */}
         <div className="flex items-center space-x-3">

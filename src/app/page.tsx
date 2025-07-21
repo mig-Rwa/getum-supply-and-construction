@@ -47,7 +47,7 @@ const products = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-28">
       <Navbar />
       <div className="relative isolate overflow-hidden bg-white">
         <motion.div

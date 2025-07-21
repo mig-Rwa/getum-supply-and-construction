@@ -84,7 +84,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-28">
       <Navbar />
       
       {/* Contact Hero Section */}

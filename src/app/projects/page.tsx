@@ -43,7 +43,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-28">
       <Navbar />
       <div className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

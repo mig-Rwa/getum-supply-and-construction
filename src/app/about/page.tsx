@@ -96,7 +96,7 @@ import { useState } from 'react';
 export default function AboutPage() {
   const [contactOpen, setContactOpen] = useState<number | null>(null);
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-28">
       <Navbar />
       
       {/* Hero Section */}

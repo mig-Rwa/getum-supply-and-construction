@@ -45,7 +45,7 @@ const equipment = [
 
 export default function EquipmentPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-28">
       <Navbar />
       <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 export default function Navbar() {
   return (
-    <header className="w-full px-6 py-4 bg-white shadow-md fixed top-0 left-0 z-50">
+    <header className="w-full px-6 py-2 bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         {/* Logo + Company Name */}
         <div className="flex items-center space-x-3">
-          <Image src="/images/logo-getum.png" alt="Logo" width={120} height={120} className="h-32 w-auto" />
+          <Image src="/images/logo-getum.png" alt="Logo" width={80} height={80} className="h-20 w-auto" />
           <h1 className="text-base md:text-lg font-bold text-gray-900">
             Getum Supply & Construction Ltd.
           </h1>
